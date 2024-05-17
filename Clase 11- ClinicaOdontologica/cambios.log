@@ -1,0 +1,49 @@
+[2024-05-16 20:21:46] [ WARN ] [BD:34] Error de Sintaxis en sentencia SQL "CREATE TABLE DOMICILIOS (ID INT AUTO_INCREMENT PRIMARY KEY, CALLE VARCHAR(100) NOT NULL, NUMERO INT NOT NULL, LOCALIDAD VARCHAR(100) NOT NULL, PROVINCIA VARCHAR(100) NOT NULL[*]"; se esperaba "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE DOMICILIOS (ID INT AUTO_INCREMENT PRIMARY KEY, CALLE VARCHAR(100) NOT NULL, NUMERO INT NOT NULL, LOCALIDAD VARCHAR(100) NOT NULL, PROVINCIA VARCHAR(100) NOT NULL[*]"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE DOMICILIOS (ID INT AUTO_INCREMENT PRIMARY KEY, CALLE VARCHAR(100) NOT NULL, NUMERO INT NOT NULL, LOCALIDAD VARCHAR(100) NOT NULL, PROVINCIA VARCHAR(100) NOT NULL [42001-224]
+[2024-05-16 20:21:46] [ INFO ] [PacienteDAOH2:23] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-16 20:21:46] [ ERROR] [PacienteDAOH2:41] Table "PACIENTES" not found (this database is empty); SQL statement:
+SELECT * FROM PACIENTES WHERE ID=? [42104-224]
+[2024-05-16 20:23:58] [ WARN ] [BD:34] Conversión de datos fallida, convirtiendo "2003 (PACIENTES: ""FECHA_INGRESO"" DATE NOT NULL)"
+Data conversion error converting "2003 (PACIENTES: ""FECHA_INGRESO"" DATE NOT NULL)"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111',2024-05-16, 1), ('German','Fraire','22222',2024-05-10,2) [22018-224]
+[2024-05-16 20:23:58] [ INFO ] [PacienteDAOH2:23] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-16 20:25:34] [ WARN ] [BD:34] Error de Sintaxis en sentencia SQL "INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111'','2024-05-16', 1), ('German','Fraire','22222','2024-05-10',2); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay[*]')"
+Syntax error in SQL statement "INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111'','2024-05-16', 1), ('German','Fraire','22222','2024-05-10',2); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay[*]')"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111'','2024-05-16', 1), ('German','Fraire','22222','2024-05-10',2); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay') [42000-224]
+[2024-05-16 20:25:34] [ INFO ] [PacienteDAOH2:23] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-16 20:26:42] [ INFO ] [BD:29] tabla creada con exito
+[2024-05-16 20:26:42] [ INFO ] [PacienteDAOH2:23] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-16 20:26:42] [ INFO ] [DomicilioDAOH2:22] iniciando la busqueda de un domicilio con id: 2
+[2024-05-16 21:23:22] [ INFO ] [BD:29] tabla creada con exito
+[2024-05-16 21:23:22] [ INFO ] [PacienteDAOH2:23] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-16 21:23:22] [ INFO ] [DomicilioDAOH2:22] iniciando la busqueda de un domicilio con id: 2
+[2024-05-16 21:52:23] [ WARN ] [BD:40] Error de Sintaxis en sentencia SQL "CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, MATRICULA INT[*](100) NOT NULL)"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, DEFAULT, GENERATED, ON UPDATE, NOT NULL, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, MATRICULA INT[*](100) NOT NULL)"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, DEFAULT, GENERATED, ON UPDATE, NOT NULL, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL, MATRICULA INT(100) NOT NULL) [42001-224]
+[2024-05-16 21:52:23] [ INFO ] [PacienteDAOH2:23] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-16 21:52:23] [ ERROR] [PacienteDAOH2:41] Tabla "PACIENTES" no encontrada
+Table "PACIENTES" not found; SQL statement:
+SELECT * FROM PACIENTES WHERE ID=? [42102-224]
+[2024-05-16 21:53:06] [ INFO ] [BD:35] tabla creada con exito
+[2024-05-16 21:53:06] [ INFO ] [PacienteDAOH2:23] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-16 21:53:06] [ INFO ] [DomicilioDAOH2:22] iniciando la busqueda de un domicilio con id: 2
+[2024-05-16 22:39:59] [ WARN ] [BD:41] Error de Sintaxis en sentencia SQL "INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')[*]INSERT INTO ODONTOLOGOS  (MATRICULA, NOMBRE, APELLIDO) VALUES (1,'Gonzalo','Acosta'), (2,'Fabian','Ayzaguer')"
+Syntax error in SQL statement "INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')[*]INSERT INTO ODONTOLOGOS  (MATRICULA, NOMBRE, APELLIDO) VALUES (1,'Gonzalo','Acosta'), (2,'Fabian','Ayzaguer')"; SQL statement:
+INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')INSERT INTO ODONTOLOGOS  (MATRICULA, NOMBRE, APELLIDO) VALUES (1,'Gonzalo','Acosta'), (2,'Fabian','Ayzaguer') [42000-224]
+[2024-05-16 22:42:04] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-16 22:45:25] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-16 22:45:58] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-16 22:47:09] [ WARN ] [BD:39] Error de Sintaxis en sentencia SQL "INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')[*]INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (1,'Gonzalo','Acosta'), (2,'Fabian','Ayzaguer')"
+Syntax error in SQL statement "INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')[*]INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (1,'Gonzalo','Acosta'), (2,'Fabian','Ayzaguer')"; SQL statement:
+INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (1,'Gonzalo','Acosta'), (2,'Fabian','Ayzaguer') [42000-224]
+[2024-05-16 22:48:12] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-16 22:48:42] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-16 22:48:42] [ INFO ] [PacienteDAOH2:23] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-16 22:48:42] [ INFO ] [DomicilioDAOH2:22] iniciando la busqueda de un domicilio con id: 2
+[2024-05-16 22:49:40] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-16 22:53:02] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-16 22:55:15] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-16 22:55:15] [ INFO ] [OdontologoDAOH2:39] iniciando la operacion de buscado de un odontologo con id : 1
+[2024-05-16 22:56:07] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-16 22:56:07] [ INFO ] [OdontologoDAOH2:39] iniciando la operacion de buscado de un odontologo con id : 1
